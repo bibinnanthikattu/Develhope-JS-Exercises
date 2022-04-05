@@ -1,4 +1,6 @@
 function greet(greeting) {
+
+  return (arg) => `${greeting}, ${arg}`;
   // ...
 }
 

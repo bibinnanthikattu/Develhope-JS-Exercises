@@ -1,8 +1,13 @@
 function getKeys(obj) {
   // ...
+  const key=[]
+  for (let keys in obj) {
+    key.push(keys);
+  }
+  return key;
+  // const objToArr = Object.keys(obj);
+  // return objToArr;
 
-  const objToArr = Object.keys(obj);
-  return objToArr;
  
 }
 

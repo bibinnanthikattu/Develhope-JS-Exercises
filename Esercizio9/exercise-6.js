@@ -1,5 +1,6 @@
 function getKeys(obj) {
-  // ...
+  for (let keyss in person)
+  console.log(keyss)
 }
 
 const person = {
@@ -11,4 +12,3 @@ const person = {
 };
 
 const keys = getKeys(person);
-console.log(keys);

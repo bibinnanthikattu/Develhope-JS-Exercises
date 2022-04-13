@@ -1,9 +1,12 @@
 function sumUntil(maxValue) {
-  let sum = 0;
+  let sum = "";
+  realSum = 0;
   for (let i = 1; i <= maxValue; i++) {
-    sum = i + sum;
+    sum = `${sum} + ${i}`;
+    realSum = realSum + i
   }
+  sum += ` = ${realSum}`
   return sum;
 }
 
-console.log(sumUntil(100));
+console.log(sumUntil(5));

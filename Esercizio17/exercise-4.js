@@ -1,5 +1,27 @@
 function calculate() {
-  // ...
+  let number = 1 ;
+  return {
+    add: function(input) {
+      number = number + input;
+      return this;
+    },
+    sub: function(input) {
+     number = number - input;
+     return this;
+    },
+    multiply: function(input) {
+      number = number * input;
+      return this;
+    },
+    divide: function(input) {
+    number = number / input;
+    return this;
+    },
+    printResult: function() {
+      console.log(number);
+      return this;
+    }
+  }
 }
 
 const calculator = calculate();

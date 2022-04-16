@@ -12,6 +12,7 @@ const person1 = {
 // Argh! Nonostante abbia utilizzato Object.assign(), modificando la proprietà "address",
 // viene modificato il riferimento all'oggetto person1
 const person2 = Object.assign({}, person1);
+person2.address = Object.assign({}, person1.address);
 
 person2.address.region = 'Lombardia';
 person2.address.city = 'Milan';

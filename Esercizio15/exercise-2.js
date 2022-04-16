@@ -1,5 +1,7 @@
 function pow(base) {
-  // ...
+  return function (exponent) {
+  return base ** exponent;
+  }
 }
 
 const pow2 = pow(2);

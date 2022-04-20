@@ -1,7 +1,7 @@
 function getKeys(obj) {
   // ...
   const key=[]
-  for (let keys in obj) {
+  for (let keys in person) {
     key.push(keys);
   }
   return key;

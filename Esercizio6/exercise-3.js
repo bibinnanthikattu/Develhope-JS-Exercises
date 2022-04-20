@@ -11,10 +11,11 @@ const persons = [
   { name: 'Sandra', age: 34 },
   { name: 'Alice', age: 28 }
 ];
-let adult = [];
+
 
 
 function adultFilter(persons) {
+  let adult = [];
   // for loop
   for (let i = 0; i < persons.length; i++){
     if (persons[i].age > 20) {

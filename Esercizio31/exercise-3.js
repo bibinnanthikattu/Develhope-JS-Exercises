@@ -1,5 +1,6 @@
 function calculateAverageAge(persons) {
   // ...
+  
 }
 
 const persons = [
@@ -16,5 +17,7 @@ const persons = [
 ];
 
 const average = calculateAverageAge(persons);
-console.log(persons);
-console.log(average);
+// console.log(persons);
+// console.log(average);
+// console.log(persons[]);
+ 

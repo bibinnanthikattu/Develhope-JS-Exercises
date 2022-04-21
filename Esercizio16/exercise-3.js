@@ -1,5 +1,5 @@
 function createStore() {
-  let = allProducts = [];
+  let allProducts = [];
   return function (product) {
   allProducts.push(product);
   console.log(allProducts)

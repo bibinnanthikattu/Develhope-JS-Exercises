@@ -7,6 +7,7 @@ class BankAccount {
 
   deposit(amount) {
     // throw an exception if amount is negative
+ 
     this.#amount += amount;
   }
 
@@ -23,5 +24,5 @@ class BankAccount {
 const bankAccount = new BankAccount(1000);
 bankAccount.deposit(500);
 bankAccount.deposit(200);
-bankAccount.withdraw(10000); // This operation should not be possible, because you cannot withdraw more than the account balance
+// bankAccount.withdraw(10000); // This operation should not be possible, because you cannot withdraw more than the account balance
 bankAccount.view();

@@ -1,3 +1,18 @@
+class BankAccount{
+    constructor(initial) {
+        this.balance = initial;
+    }
+    deposit(amount){
+        this.balance += amount;
+    }
+    withdraw(amount) {
+        this.balance -=amount
+    }
+    view() {
+        console.log(this.balance);  
+   } 
+}
+
 const bankAccount = new BankAccount(1000);
 bankAccount.deposit(500);
 bankAccount.deposit(200);

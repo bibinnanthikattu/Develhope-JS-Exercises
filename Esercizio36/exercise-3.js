@@ -3,6 +3,10 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
   }
+ static fromObject(obj) {
+    return new Person(obj.firstName, obj.lastName);
+  }
+
 }
 
 const obj = {
@@ -10,5 +14,6 @@ const obj = {
   lastName: 'Rossi'
 };
 
-const person = Person.fromObject(obj);
-console.log(`${person.firstName} ${person.lastName}`);
+const men = Person.fromObject(obj);
+
+console.log(`${men.firstName} ${men.lastName}`);

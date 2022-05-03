@@ -1,6 +1,7 @@
 function uncompletedNotes(notes) {
   // ...
- 
+  let result = notes.find((item) => item.todos.filter(item=>item.done===false ));
+  return result; 
 }
 
 const notes = [
@@ -54,5 +55,8 @@ const notes = [
 ]
 
 const notesInProgress = uncompletedNotes(notes);
-// console.log('All notes: ', notes);
-console.log('Notes In Progress: ', notesInProgress);
+console.log('All notes: ', notes);
+console.log("Notes In Progress: ", notesInProgress);
+//
+
+

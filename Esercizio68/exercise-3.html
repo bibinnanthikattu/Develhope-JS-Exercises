@@ -11,7 +11,7 @@
           <input type="checkbox" id="todo-completed" />
         </div>
 
-        <button type="submit" id="submit-todo"></button>
+        <button type="submit" id="submit-todo">submit</button>
       </form>
     </div>
   </body>
@@ -19,4 +19,31 @@
 
 <script>
   // code here
+  const formTodo =document.querySelector('form');
+  const todoTitle =document.getElementById('todo-title');
+  const todoCompleted = document.getElementById('todo-completed');
+  formTodo.addEventListener('submit',(e)=>{
+    e.preventDefault();
+        async ()=>{
+      try{
+      let postData = await fetch('https://jsonplaceholder.typicode.com/posts',{
+        method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: `
+              title:${todoTitle.value},
+              complete:${todoCompleted.value}`,
+    });
+      const response = await postData.json();
+      console.log(response);
+    }
+      catch(err){
+        console.log(err.message);
+      }
+    };
+    
+  })
+
+
 </script>

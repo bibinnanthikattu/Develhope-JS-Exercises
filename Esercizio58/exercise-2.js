@@ -20,9 +20,19 @@ const persons = [
 ];
 
 function fetchPersonById(id) {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(persons.find(item => item.id === id)), 1000);
+  return new Promise((resolve,reject) => {
+    setTimeout(() => {
+      let info=persons.find(item => item.id === id)
+      if (!info) {
+        reject(new Error("not a valid ID"));
+      } else {
+        
+        resolve(info);
+      }
+
+    }, 1000);
   });
 }
 
-fetchPersonById(2).then((person) => console.log(person));
+fetchPersonById(2).then((person) => console.log(person)).catch(err=>console.log(err.message));
+fetchPersonById(5).then((person) => console.log(person)).catch(err=>console.log(err.message));

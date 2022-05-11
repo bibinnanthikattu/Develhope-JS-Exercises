@@ -26,6 +26,7 @@ function fetchPersonById(id) {
       
       if (person) {
         return resolve(JSON.stringify(person));
+        // resolve(person)
       }
 
       return reject(`Person with id: ${id} doesn't exist`);
@@ -34,3 +35,5 @@ function fetchPersonById(id) {
 }
 
 // core here
+fetchPersonById(2).then(person => console.log(JSON.parse(person))).catch(err=>console.log(err));
+fetchPersonById(5).then(person => console.log(person)).catch(err=>console.log(err));

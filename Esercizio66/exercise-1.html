@@ -1,6 +1,7 @@
 <html>
   <body>
     <div id="container">
+      something
       <ul class="todo-list"></ul>
     </div>
   </body>
@@ -8,4 +9,18 @@
 
 <script>
   // code here
+  (async ()=>{
+    const todoList=document.getElementsByClassName('todo-list');
+    const fetchApi= await fetch('https://jsonplaceholder.typicode.com/todos');
+    const data = await fetchApi.json();
+    const li = document.createElement('li');
+    let lists;
+    for(let i =0;i<data.length;i++){
+      li.textContent =data[i].title;
+      console.log(li);
+    }
+    // todoList.innerHTML=lists;
+  })();
+
+
 </script>

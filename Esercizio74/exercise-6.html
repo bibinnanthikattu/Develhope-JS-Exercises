@@ -11,4 +11,26 @@
 
 <script>
   // Code here
+  const firstName =document.createElement('input');
+  const lastName =document.createElement('input');
+  const age = document.createElement('input');
+  const form=document.querySelector('#person-form');
+  let person={};
+  (function initForm(){
+    firstName.type="text";
+    firstName.value="firstName";
+    lastName.type="text";
+    lastName.value="lastName";
+    age.type='number';
+    age.value=28;
+    form.append(firstName,lastName,age);
+  })();
+  form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    let input =document.querySelectorAll('input');
+    person.firstName=input[0].value;
+    person.lastName=input[1].value;
+    person.age=input[2].value;
+    console.log(person);
+  })
 </script>

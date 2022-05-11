@@ -1,6 +1,8 @@
-function sum(num1, num2, num3) {
-  return num1 + num2 + num3;
+function sum(...numbers) {
+  let result = 0;
+  numbers.forEach(element =>result +=element);
+  return result; 
 }
 
 const numbers = [1, 2, 3];
-console.log(sum(numbers[0], numbers[1], numbers[2]));
+console.log(sum(...numbers));

@@ -35,3 +35,22 @@ const jobs = [
 ];
 
 // core here
+function fetchPersonById(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let person = persons.find(key => key.id === id);
+      return (person ? resolve(person) : reject(`Not found the person of id ${id}`));
+    },1000)
+  })
+}
+// fetchPersonById(2).then(person=>console.log(person)).catch(err=>console.log(err));
+function fetchJobById(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let job = jobs.find(key => key.id === id);
+      return(!job ? reject(`not found the job of the id : ${id}`) : resolve(job.jobTitle))
+    },500)
+  })
+}
+// fetchJobById(2).then(job => console.log(job)).catch(err => console.log(err));
+Promise.race([fetchPersonById(2), fetchJobById(1)]).then(result => console.log(result)).catch(err => console.log(err));

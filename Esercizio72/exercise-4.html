@@ -21,4 +21,14 @@
 
 <script>
   // code here
+  const label = document.getElementsByTagName('label');
+  const input =document.getElementsByClassName('form-input');
+  const form =document.querySelector('form');
+  let person={}
+  for(let i=0; i < label.length;i++){
+    person[label[i].textContent]=input[i].value;
+  }
+  form.setAttribute('data-person',JSON.stringify(person))
+  console.log(person);
+
 </script>

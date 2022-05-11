@@ -2,8 +2,8 @@
   <body>
     <div id="container">
       <h2>Hero's List</h2>
-      <ul class="hero-list">
-        <li class="hero-list-item">Batman</li>
+      <ul class="hero-list" >
+        <li class="hero-list-item" >Batman</li>
         <li class="hero-list-item">Superman</li>
         <li class="hero-list-item">Spiderman</li>
         <li class="hero-list-item">Hulk</li>
@@ -15,4 +15,18 @@
 
 <script>
   // code here
+  const item=document.getElementsByClassName('hero-list-item');
+  console.log(item);
+    for(let i =0 ; i < item.length;i++){
+
+      item[i].addEventListener('mouseover',()=>{
+        item.style.color="red";
+      });
+      item[i].addEventListener('mouseout',()=>{
+        item.style.color="initial";
+        });
+        console.log(item[i]);
+    }
+  
+
 </script>

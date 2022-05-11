@@ -35,3 +35,32 @@ const jobs = [
 ];
 
 // core here
+function fetchPersonById(id) {
+  return new Promise((resolve, reject) => {
+    let person = persons.find(key => key.id === id);
+    if (!person) {
+      reject(`Not found the person`);
+    } else {
+      resolve(person)
+    }
+  })
+}
+// fetchPersonById(5).then(person => console.log(person)).catch(err => console.log(err));
+
+function fetchJobById(id) {
+  return new Promise((resolve, reject) => {
+    let job = jobs.find(key => key.id === id);
+    if (!job) {
+      reject(`not found the job for id : ${id}`);
+    } else {
+      // returns the respected object for the id
+      // resolve(job);
+      
+      // returns the job type
+      resolve(job.jobTitle);
+    }
+  })
+}
+// fetchJobById(1).then(job=>console.log(job)).catch(err=>console.log(err))
+Promise.all([fetchPersonById(1), fetchJobById(1)]).then(values => console.log(values)).catch(err => console.log(err));
+Promise.all([fetchPersonById(1), fetchJobById(5)]).then(values => console.log(values)).catch(err => console.log(err));

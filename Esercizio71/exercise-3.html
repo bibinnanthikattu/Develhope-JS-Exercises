@@ -21,4 +21,10 @@
 
 <script>
   // code here
+  let label=document.getElementsByTagName('label');
+  const input = document.getElementsByClassName('form-input')
+  for(let i =0 ;i<label.length;i++){
+    console.log(label[i].textContent + input[i].value);
+  }
+
 </script>

@@ -12,4 +12,21 @@
 
 <script>
   // code here
+  const btnAddRow = document.getElementById('add-row');
+  const tBody = document.querySelector('tbody');
+  const tr=document.createElement('tr');
+  const firstName =document.createElement('td');
+  const lasttName =document.createElement('td');
+  const age =document.createElement('td');
+
+  function addRow(){
+    firstName.textContent="firstName: ";
+    lasttName.textContent="lastName: ";
+    age.textContent="Age: ";
+    tr.append(firstName,lasttName,age);
+    tBody.append(tr); 
+  }
+  btnAddRow.addEventListener('click',addRow);
+
+
 </script>

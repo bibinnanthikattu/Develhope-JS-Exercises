@@ -12,4 +12,11 @@
 
 <script>
   // code here
+  const fetchPost = document.getElementById('fetch-post');
+  let postTitle = document.getElementById('post-title');
+  fetchPost.addEventListener('click',()=>{
+    let postFromLocalStorage = JSON.parse(localStorage.getItem('post'));
+    postTitle.innerHTML=postFromLocalStorage.title;
+  })
+  
 </script>

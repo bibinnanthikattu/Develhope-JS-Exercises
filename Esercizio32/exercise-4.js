@@ -1,6 +1,6 @@
 function uncompletedNotes(notes) {
   // ...
-  let result = notes.find((item) => item.todos.filter(item=>item.done===false ));
+  let result = notes.filter((item) => item.todos.find(item=>item.done===false ));
   return result; 
 }
 

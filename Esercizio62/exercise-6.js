@@ -25,10 +25,10 @@ function fetchPersonById(id) {
       const person = persons.find(item => item.id === id);
 
       if (person) {
-        return resolve(JSON.stringify(person));
+        resolve(JSON.stringify(person));
       }
 
-      return reject(`Person with id: ${id} doesn't exist`);
+       reject(`Person with id: ${id} doesn't exist`);
     }, 1000);
   });
 }
@@ -47,4 +47,4 @@ async function personById(para) {
   }
  
 }
-personById(2);
+personById(5);

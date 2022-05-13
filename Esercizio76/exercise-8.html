@@ -15,18 +15,13 @@
 
 <script>
   // code here
-  const item=document.getElementsByClassName('hero-list-item');
-  console.log(item);
-    for(let i =0 ; i < item.length;i++){
-
-      item[i].addEventListener('mouseover',()=>{
-        item.style.color="red";
-      });
-      item[i].addEventListener('mouseout',()=>{
-        item.style.color="initial";
-        });
-        console.log(item[i]);
-    }
+  const item=document.querySelectorAll('.hero-list-item');
+  item.forEach((items)=>{
+    items.addEventListener('mouseover',()=>items.style.color = 'red');
+    items.addEventListener('mouseout',()=>items.style.color="initial");
+    console.log(items);
+  })
+ 
   
 
 </script>

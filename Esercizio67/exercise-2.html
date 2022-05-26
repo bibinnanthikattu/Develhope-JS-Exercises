@@ -6,4 +6,26 @@
 
 <script>
   // code here
+ (async ()=>{
+   let fetchData = await fetch('https://jsonplaceholder.typicode.com/todos/4');
+   let todoList = await fetchData.json();
+   console.log(todoList);
+   let container=document.querySelector('#container');
+
+   let h2=document.createElement('h2');
+   h2.textContent=todoList.title;
+   console.log(h2);
+   container.append(h2)
+   let checkbox=document.createElement('input');
+   checkbox.type='checkbox';
+  //  todoList.completed = false;
+  //  console.log(todoList.completed);
+   //  if(todoList.completed){
+     //   checkbox.checked=true;
+     //  }
+     todoList.completed ? checkbox.checked=true : checkbox.checked=false;
+     container.append(checkbox);
+  
+ })();
+
 </script>
